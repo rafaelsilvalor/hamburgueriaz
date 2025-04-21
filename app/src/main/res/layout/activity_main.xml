@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fdf0da">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Faixa superior colorida -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FF9800" />
+
+        <LinearLayout android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <!-- Logo no topo -->
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_hamburgueriaz"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:contentDescription="Logo HamburgueriaZ"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Campo para o nome do cliente -->
+            <EditText
+                android:id="@+id/editTextNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Digite seu nome"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#5D4037"
+                android:textColorHint="#5D4037"
+                android:textColor="#000000" />
+
+            <!-- Adicionais -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adicionais"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#5D4037"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center_horizontal" />
+
+            <CheckBox
+                android:id="@+id/checkboxBacon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bacon"
+                android:layout_gravity="start"
+                android:layout_marginStart="24dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxQueijo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Queijo"
+                android:layout_gravity="start"
+                android:layout_marginStart="24dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxOnionRings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Onion Rings"
+                android:layout_gravity="start"
+                android:layout_marginStart="24dp" />
+
+            <!-- Quantidade -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantidade:"
+                android:textStyle="bold"
+                android:textColor="#5D4037"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/buttonSubtrair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:backgroundTint="#FF9800"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textViewQuantidade"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="16dp" />
+
+                <Button
+                    android:id="@+id/buttonAdicionar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:backgroundTint="#FF9800"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <!-- Preço total -->
+            <TextView
+                android:id="@+id/textViewPrecoTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preço Total: R$ 20"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#5D4037"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Resumo do pedido -->
+            <TextView
+                android:id="@+id/textViewResumoPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resumo do pedido aparecerá aqui..."
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:background="#FFE0B2"
+                android:textColor="#000000" />
+
+            <!-- Botão enviar pedido -->
+            <Button
+                android:id="@+id/buttonEnviarPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar Pedido"
+                android:textAllCaps="false"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#FF9800"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
